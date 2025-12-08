@@ -1,23 +1,27 @@
-package com.practiceeqes;
+package com.constructor;
 
-public class Car {
-	private String brand;
-	private int price;
+public  class Car {
+	String name;
+	String fuelType;
+	String carNo;
+	String year;
+	String price;
 
-	public String getBrand() {
-		return brand;
-	}
-
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
-	}
-
+	 Car (String name, String fuelType,String carNo, String year,String price ){
+	    this.name = name;
+	    this.fuelType = fuelType;
+	    this.carNo =carNo;
+	    this.year =year;
+	    this.price = price;
+	    this.DisplayDetial();
+	    }
+	    
+	    void DisplayDetial() {
+	    	
+	    	System.out.println("Car owenr name:"+name);
+	    	System.out.println("Car fuelType :"+fuelType);
+	    	System.out.println("Car no :"+carNo);
+	    	System.out.println("Car perches year :"+year);
+	    	System.out.println("Car price:"+price);
+	    	}
 }
