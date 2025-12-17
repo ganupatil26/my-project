@@ -1,33 +1,21 @@
-package com.constructor;
+package com.overload;
 
 public class Student {
-	int rollNo;
+
+	int id;
 	String name;
-	int std;
-	long mobNo;
-	int age;
-	String gender;
-	
 
-	// parameterized constructor
-	Student(int rollNo, String name, int std, long mobNo, int age, String gender) {
-		this.rollNo = rollNo;
-		this.name = name;
-		this.std = std;
-		this.mobNo = mobNo;
-		this.gender = gender;
-		this.displayDetails();
-
+	Student (int id, String name) {
+	        this.id = id;
+	        this.name = name;
 	}
 
-	void displayDetails() {
-		System.out.println("Roll no" + rollNo);
-		System.out.println("Student name:" + name);
-		System.out.println("Standard:" + std);
-		System.out.println("Student mobile no:" + mobNo);
-		System.out.println("Gender:" + gender);
-		
-
+	void display() {
+		System.out.println("Id: " + id + ", Name: " + name);
 	}
 
+	public static void main(String[] args) {
+		 Student s = new Student(102, "Rahul");
+		 s.display();
+	}
 }
