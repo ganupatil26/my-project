@@ -1,12 +1,12 @@
-package com.superr;
+package com.Reference;
 
-
-
-public class Child1 extends Parent{
-	Child1(){
-		super("pravin patil", 18);
-		
+public class Child1 extends Home{
+	void name() {
+		System.out.println("child1 : shivani pail");
 	}
-	
-	
+	void age() {
+		System.out.println("age:20");
+	}
+
+
 }
