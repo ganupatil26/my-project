@@ -1,0 +1,123 @@
+package com.arrays;
+
+import java.util.Arrays;
+
+public class Demo2D {
+	public static void main(String[] args) {
+
+		int[][] num = { { 2, 5, 8 }, { 3, 8, 7 }, { 5, 1, 9 } };
+		System.out.println(Arrays.deepToString(num));
+		System.out.println("--each row elemant adddition--");
+		for (int i = 0; i < num.length; i++) {
+			int rowadd = 0;
+			for (int j = 0; j < num[i].length; j++) {
+				rowadd += num[i][j];
+			}
+			System.out.println("Row " + i + " sum " + rowadd);
+		}
+		System.out.println("--summ of each coulmn--");
+		for (int i = 0; i < num.length; i++) {
+			for (int j = 0; j < num[i].length; j++) {
+				System.out.print(num[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+		for (int j = 0; j < num[0].length; j++) {
+			int sum = 0;
+			{
+				for (int i = 0; i < num.length; i++)
+					sum += num[i][j];
+			}
+			System.out.println("coulumn " + j + " sum " + sum);
+		}
+		
+		System.out.println("-- digonal number --");
+		for(int i=0;i<num.length;i++) {
+			System.out.println(num[i][num.length-1-i]+" ");
+		}
+
+		System.out.println("--search elaemnt--");
+		int search = 3;
+		boolean found = false;
+		for (int i = 0;i<num.length;i++) {
+			for (int j =0;j<num[i].length;j++) {
+				if(num[i][j]==search) {
+					found = true;
+				}
+			}
+		}
+		System.out.println(found ? "found " : "not found");
+
+		System.out.println("--addtion of  evan and odd number in 2d array--");
+		int add = 0;
+		int evan = 0;
+		int odd =0;
+		for (int i = 0; i < num.length; i++) {
+			for (int j = 0; j < num[i].length; j++) {
+				if (num[i][j] % 2 == 0) {
+					add = add + num[i][j];
+				}
+				if (num[i][j] % 2 == 0) {
+					evan = num[i][j];
+					System.out.print(evan + " + ");
+				}
+			}
+		}
+		System.out.println("=" + add);
+		
+
+	int large=0;
+	System.out.println("--laragest num in arrays--");
+	for (int i = 0;i<num.length;i++) {
+		for(int j = 0;j<num[i].length;j++) {
+			if(num[i][j]>large) {
+				large = num[i][j];	
+				
+		}
+	}
+	}
+	int samllest= num[0][0];
+	System.out.println("--samallest num--");
+	for (int i = 0;i<num.length;i++) {
+		for(int j = 0;j<num[i].length;j++) {
+			if(num[i][j]<samllest) {
+				samllest = num[i][j];	
+		}
+	}
+	}
+	System.out.println(Arrays.deepToString(num));
+	System.out.println("samllest of 2d arrays:-"+samllest);
+	System.out.println("largest of 2d arrays:-"+large);
+
+	
+	
+	int even = 0;
+	System.out.println("--even num--");
+	for (int i =0; i < num.length;i++) {
+		for ( int j = 0 ; j< num[i].length;j++) {
+			if(num[i][j] % 2==0) {
+				even = num[i][j];
+				System.out.print(even+ " ,");
+			}
+			
+		}
+		System.out.println();
+	}
+
+
+	
+
+	System.out.println("--addtion of 2d array--");
+	int add1 = 0;
+	for(int i = 0;i<num.length;i++) {
+		for (int j =0;j<num[i].length;j++) {
+			add1 = add1+num[i][j];
+			
+		}
+		
+	}
+	System.out.println(add1);
+	}
+	}
+
